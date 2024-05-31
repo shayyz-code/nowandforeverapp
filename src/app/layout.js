@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 
 import Navbar from "@/ui/navbar/Navbar";
 import Footer from "@/ui/footer/Footer";
+import StyledComponentsRegistry from "@/lib/registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <main className={styles.main}>{children}</main>
-        <Footer />
+        <StyledComponentsRegistry>
+          <Navbar />
+          <main className={styles.main}>{children}</main>
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
