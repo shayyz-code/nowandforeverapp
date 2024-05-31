@@ -1,3 +1,5 @@
+import pathnames from "../links";
+
 import styled from "styled-components";
 import NavLink from "./NavLink";
 import theme from "../theme";
@@ -30,13 +32,6 @@ const StyledNavLinks = styled.ul`
 export default function NavLinks() {
   const [open, setOpen] = useState(false);
 
-  const pathnames = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/aboutus" },
-    { name: "Service", path: "/service" },
-    { name: "Reviews", path: "/reviews" },
-    { name: "Contact Us", path: "/contactus" },
-  ];
   return (
     <>
       <Humburger open={open} setOpen={setOpen} />

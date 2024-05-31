@@ -7,7 +7,7 @@ const theme = {
     default: "rgb(0,0,0)",
   },
   fontSize: {
-    navName: "12px",
+    navName: "13px",
   },
 };
 
