@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import FormTextInput from "./FormTextInput";
 import theme from "../theme";
+import { useState } from "react";
 
 const StyledForm = styled.form`
   display: flex;
@@ -33,18 +34,33 @@ const StyledSubmit = styled.input`
 `;
 
 export default function Form() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phNo, setPhNo] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <StyledForm>
       <div>
-        <FormTextInput label="First Name" />
-        <FormTextInput label="Last Name" />
+        <FormTextInput
+          label="First Name"
+          val={firstName}
+          setVal={setFirstName}
+        />
+        <FormTextInput label="Last Name" val={lastName} setVal={setLastName} />
       </div>
       <div>
-        <FormTextInput label="Email" />
-        <FormTextInput label="Ph No" />
+        <FormTextInput label="Email" val={email} setVal={setEmail} />
+        <FormTextInput label="Ph No" val={phNo} setVal={setPhNo} />
       </div>
       <div>
-        <FormTextInput label="Message" isTextArea />
+        <FormTextInput
+          label="Message"
+          isTextArea
+          val={message}
+          setVal={setMessage}
+        />
       </div>
 
       <StyledSubmit type="submit" value="Submit" />

@@ -14,6 +14,7 @@ const StyledContactUs = styled.div`
 
   @media (max-width: 480px) {
     max-width: 350px;
+    background: transparent;
   }
 `;
 export default function ContactUs({ img }) {
